@@ -160,12 +160,9 @@ document.addEventListener("keydown", (event) => {
 	}
 }); 
 
-Array.from(document.getElementsByTagName('div')).forEach(el => {
-	el.addEventListener("touchstart", (event)=>{
-		event.preventDefault();
-		var newDirection = directions[event.keyCode];
-		if(newDirection !== undefined) {
-			snake.setDirection(newDirection);
-		}
+var arrBtn = Array.from(document.getElementsByClassName('btn'));
+arrBtn.forEach(el => {
+	el.addEventListener("click", (event)=>{
+	snake.setDirection(event.target.classList[1]);
 	})
 });
