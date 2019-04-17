@@ -1,11 +1,21 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
+if(document.body.clientWidth < 970 ) {
+	canvas.width = document.body.clientWidth;
+	canvas.height = 800;
+	console.log(canvas.height)
+} else {
+	canvas.width = 400;
+	canvas.height = 400;
+}
 var width = canvas.width;
 var height = canvas.height;
 var blockSize = 10;
 var widthInBlock = width / blockSize;
 var heightInBlock = height / blockSize;
 var score = 0;
+
+
 var drawBorder = function() { // границы поля
 	ctx.fillStyle = "Gray";
 	ctx.fillRect(0, 0, width, blockSize);

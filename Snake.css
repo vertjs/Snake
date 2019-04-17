@@ -5,14 +5,14 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	width: 260px;
-	height: 100px;
+	width: 520px;
+	height: 200px;
 	
 }
 
 .btn {
-	width: 60px;
-	height: 40px;
+	width: 120px;
+	height: 80px;
 	line-height: 40px;
 	border-radius: 50%;
 	background: #63BCC9;
