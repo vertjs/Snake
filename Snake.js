@@ -176,3 +176,4 @@ arrBtn.forEach(el => {
 	snake.setDirection(event.target.classList[1]);
 	})
 });
+console.log("test")
