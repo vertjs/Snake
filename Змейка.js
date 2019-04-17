@@ -1,17 +1,12 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var blockBtn = document.querySelector('.blockBtn');
-console.log(blockBtn.width)
 if(document.body.clientWidth < 970 ) {
 	canvas.width = document.body.clientWidth;
 	canvas.height = 800;
-	blockBtn.style.width = document.body.clientWidth;
-	blockBtn.style.height = 200+"px";
+	console.log(canvas.height)
 } else {
 	canvas.width = 400;
 	canvas.height = 400;
-	blockBtn.style.width = 400+"px";
-	blockBtn.style.height = 300+"px";
 }
 var width = canvas.width;
 var height = canvas.height;
@@ -178,7 +173,6 @@ document.addEventListener("keydown", (event) => {
 var arrBtn = Array.from(document.getElementsByClassName('btn'));
 arrBtn.forEach(el => {
 	el.addEventListener("click", (event)=>{
-		console.log(event.target.classList[1])
 	snake.setDirection(event.target.classList[1]);
 	})
 });
