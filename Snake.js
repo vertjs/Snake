@@ -1,9 +1,30 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
+var blockBtn = document.querySelector('.blockBtn');
+var arrBtn = Array.from(document.getElementsByClassName('btn'));
+
 if(document.body.clientWidth < 970 ) {
 	canvas.width = document.body.clientWidth;
 	canvas.height = 800;
-	console.log(canvas.height)
+	blockBtn.style.left = document.body.clientWidth/2 - 260 + "px";
+	blockBtn.style.height = 300 + "px";
+	blockBtn.style.width = 600 + "px";
+
+	arrBtn.forEach(el => {
+		el.style.width = 180 + "px";
+		el.style.height = 120 + "px";
+		el.style.marginTop = 0 +"px";
+		el.style.marginBottom = 0 +"px";
+	})
+
+	arrBtn[0].style.marginLeft = 190+"px";
+	arrBtn[0].style.marginRight = 190+"px";
+	arrBtn[3].style.marginLeft = 190+"px";
+	arrBtn[3].style.marginRight = 190+"px";
+	arrBtn[2].style.marginLeft = 90+"px";
+	arrBtn[2].style.marginRight = 0+"px";	
+	arrBtn[1].style.marginLeft = 0+"px";
+	arrBtn[1].style.marginRight = 90+"px";	
 } else {
 	canvas.width = 400;
 	canvas.height = 400;
@@ -170,7 +191,6 @@ document.addEventListener("keydown", (event) => {
 	}
 }); 
 
-var arrBtn = Array.from(document.getElementsByClassName('btn'));
 arrBtn.forEach(el => {
 	el.addEventListener("click", (event)=>{
 	snake.setDirection(event.target.classList[1]);

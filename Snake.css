@@ -1,13 +1,12 @@
-
 .blockBtn {
 	position: relative;
-	left: 60px;
+	left: 70px;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	width: 260px;
 	height: 100px;
-	
+	margin-top: 20px;	
 }
 
 .btn {
@@ -34,4 +33,10 @@
 .right {
 	margin-left: 0px;
 	margin-right: 70px;
+}
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
 }
